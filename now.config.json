@@ -1,0 +1,6 @@
+{
+  "scope": "x_942105_12_week_y",
+  "scopeId": "20c3182783663210310bc6d6feaad3ae",
+  "name": "12 Week Year",
+  "tsconfigPath": "./src/server/tsconfig.json"
+}

@@ -1,0 +1,122 @@
+import { gs, GlideRecord } from '@servicenow/glide'
+
+/**
+ * Calculate execution score for a goal based on completed weekly actions
+ */
+export function calculateGoalScore(current, previous) {
+    const goalId = current.getValue('sys_id')
+    
+    // Count total and completed weekly actions for this goal
+    const totalActionsGR = new GlideRecord('x_942105_12_week_y_weekly_action')
+    totalActionsGR.addQuery('goal', goalId)
+    totalActionsGR.query()
+    const totalActions = totalActionsGR.getRowCount()
+    
+    const completedActionsGR = new GlideRecord('x_942105_12_week_y_weekly_action')
+    completedActionsGR.addQuery('goal', goalId)
+    completedActionsGR.addQuery('completed', true)
+    completedActionsGR.query()
+    const completedActions = completedActionsGR.getRowCount()
+    
+    // Calculate execution score
+    let executionScore = 0
+    if (totalActions > 0) {
+        executionScore = Math.round((completedActions / totalActions) * 100)
+    }
+    
+    current.setValue('current_score', executionScore)
+    gs.info('Goal execution score updated: ' + executionScore + '% (' + completedActions + '/' + totalActions + ' actions completed)')
+}
+
+/**
+ * Calculate overall execution score for a 12-week cycle
+ */
+export function calculateCycleScore(current, previous) {
+    const cycleId = current.getValue('sys_id')
+    
+    // Get all goals for this cycle
+    const goalsGR = new GlideRecord('x_942105_12_week_y_goal')
+    goalsGR.addQuery('twelve_week_cycle', cycleId)
+    goalsGR.addQuery('active', true)
+    goalsGR.query()
+    
+    let totalScore = 0
+    let goalCount = 0
+    
+    while (goalsGR.next()) {
+        totalScore += parseInt(goalsGR.getValue('current_score') || '0')
+        goalCount++
+    }
+    
+    // Calculate average score
+    let averageScore = 0
+    if (goalCount > 0) {
+        averageScore = Math.round(totalScore / goalCount)
+    }
+    
+    current.setValue('execution_score', averageScore)
+    gs.info('12-Week Cycle execution score updated: ' + averageScore + '% (average of ' + goalCount + ' goals)')
+}
+
+/**
+ * Business rule function to update goal score when weekly actions change
+ */
+export function updateGoalScoreOnActionChange(current, previous) {
+    // Only recalculate if completion status changed or new action added
+    if (current.isNewRecord() || current.completed.changedFrom(previous.completed)) {
+        const goalId = current.getValue('goal')
+        if (goalId) {
+            const goalGR = new GlideRecord('x_942105_12_week_y_goal')
+            if (goalGR.get(goalId)) {
+                calculateGoalScore(goalGR, null)
+                goalGR.update()
+            }
+        }
+    }
+}
+
+/**
+ * Check if all daily tactics for a weekly action are completed and update weekly action status
+ */
+export function updateWeeklyActionFromDailyTactics(current, previous) {
+    // Only process if completion status changed or new tactic added
+    if (current.isNewRecord() || current.completed.changedFrom(previous.completed)) {
+        const weeklyActionId = current.getValue('weekly_action')
+        if (weeklyActionId) {
+            // Count total daily tactics for this weekly action
+            const totalTacticsGR = new GlideRecord('x_942105_12_week_y_daily_tactic')
+            totalTacticsGR.addQuery('weekly_action', weeklyActionId)
+            totalTacticsGR.query()
+            const totalTactics = totalTacticsGR.getRowCount()
+            
+            // Count completed daily tactics
+            const completedTacticsGR = new GlideRecord('x_942105_12_week_y_daily_tactic')
+            completedTacticsGR.addQuery('weekly_action', weeklyActionId)
+            completedTacticsGR.addQuery('completed', true)
+            completedTacticsGR.query()
+            const completedTactics = completedTacticsGR.getRowCount()
+            
+            // Update weekly action completion status
+            const weeklyActionGR = new GlideRecord('x_942105_12_week_y_weekly_action')
+            if (weeklyActionGR.get(weeklyActionId)) {
+                const wasCompleted = weeklyActionGR.getValue('completed') === 'true'
+                const shouldBeCompleted = (totalTactics > 0 && completedTactics === totalTactics)
+                
+                if (wasCompleted !== shouldBeCompleted) {
+                    weeklyActionGR.setValue('completed', shouldBeCompleted)
+                    if (shouldBeCompleted) {
+                        // Set actual completion date when all tactics are done
+                        const now = new GlideDateTime()
+                        weeklyActionGR.setValue('actual_completion_date', now.getDate())
+                    } else {
+                        // Clear actual completion date if not all tactics are done
+                        weeklyActionGR.setValue('actual_completion_date', '')
+                    }
+                    weeklyActionGR.update()
+                    
+                    gs.info('Weekly Action completion updated: ' + shouldBeCompleted + ' (' + completedTactics + '/' + totalTactics + ' daily tactics completed)')
+                }
+            }
+        }
+    }
+}
