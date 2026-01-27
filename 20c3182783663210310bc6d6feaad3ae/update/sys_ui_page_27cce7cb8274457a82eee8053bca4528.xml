@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script/>
+        <description>12 Week Year Application Design Document and User Guide</description>
+        <direct>true</direct>
+        <endpoint>x_942105_12_week_y_twelve_week_year_documentation.do</endpoint>
+        <html><![CDATA[
+        <h1 style="color: #2c5aa0; text-align: center;">12 Week Year Application</h1>
+        <h2 style="color: #666; text-align: center;">Design Document & User Guide</h2>
+        
+        <div style="max-width: 800px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.6;">
+        
+        <h2 style="color: #2c5aa0; border-bottom: 2px solid #e8f4fd; padding-bottom: 10px;">Application Overview</h2>
+        <p>The <strong>12 Week Year Application</strong> operationalizes the proven 12 Week Year methodology for focused goal achievement.</p>
+        
+        <h3 style="color: #1a365d;">Complete Hierarchy:</h3>
+        <p style="background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center;">
+            <strong>12 Week Cycle → Goals → Weekly Actions → Daily Tactics</strong>
+        </p>
+        
+        <h2 style="color: #2c5aa0; border-bottom: 2px solid #e8f4fd; padding-bottom: 10px;">Getting Started Guide</h2>
+        
+        <h3 style="color: #1a365d;">Step 1: Create a 12 Week Cycle</h3>
+        <ol>
+            <li>Navigate to <strong>12 Week Year → 12 Week Cycles</strong></li>
+            <li>Click <strong>New</strong> to create a cycle</li>
+            <li>Enter descriptive name (e.g., "Q1 2024 Growth Initiative")</li>
+            <li>Set start/end dates (84 days apart)</li>
+            <li>Write inspiring vision statement</li>
+        </ol>
+        
+        <h3 style="color: #1a365d;">Step 2: Define Goals (1-3 Maximum)</h3>
+        <ol>
+            <li>Navigate to <strong>12 Week Year → Goals</strong></li>
+            <li>Link to your 12-week cycle</li>
+            <li>Write clear, specific goal title</li>
+            <li>Set target execution score (80-90% realistic)</li>
+            <li>Assign priority ranking (1 = highest)</li>
+        </ol>
+        
+        <h3 style="color: #1a365d;">Step 3: Plan Weekly Actions</h3>
+        <ol>
+            <li>From Goal record → <strong>Weekly Actions</strong> related list</li>
+            <li>Create 5-15 specific actions per goal</li>
+            <li>Distribute across weeks 1-12</li>
+            <li>Set realistic completion dates and time estimates</li>
+        </ol>
+        
+        <h3 style="color: #1a365d;">Step 4: Break Down Daily Tactics</h3>
+        <ol>
+            <li>From Weekly Action → <strong>Daily Tactics</strong> related list</li>
+            <li>Create 1-5 specific tasks per action</li>
+            <li>Assign to specific days (Mon-Fri)</li>
+            <li>Estimate hours per task (max 8 per day)</li>
+        </ol>
+        
+        <h2 style="color: #2c5aa0; border-bottom: 2px solid #e8f4fd; padding-bottom: 10px;">Intelligent Automation</h2>
+        <p><strong>The application automatically calculates execution scores:</strong></p>
+        <ul>
+            <li>Complete all daily tactics → Weekly action auto-completes</li>
+            <li>Weekly actions complete → Goal execution score updates</li>
+            <li>Goal scores update → Cycle overall score recalculates</li>
+        </ul>
+        
+        <h2 style="color: #2c5aa0; border-bottom: 2px solid #e8f4fd; padding-bottom: 10px;">Success Metrics</h2>
+        <ul>
+            <li><strong>85%+ Execution Score:</strong> Excellent execution discipline</li>
+            <li><strong>70-84% Execution Score:</strong> Good performance with improvement room</li>
+            <li><strong>Below 70%:</strong> Requires immediate attention and plan adjustment</li>
+        </ul>
+        
+        <h2 style="color: #2c5aa0; border-bottom: 2px solid #e8f4fd; padding-bottom: 10px;">Best Practices</h2>
+        <h3 style="color: #1a365d;">Planning:</h3>
+        <ul>
+            <li>Keep goals few & focused (1-3 per cycle)</li>
+            <li>Make actions specific and measurable</li>
+            <li>Plan daily tactics as 2-4 hour tasks</li>
+            <li>Set realistic 85% execution targets initially</li>
+        </ul>
+        
+        <h3 style="color: #1a365d;">Execution:</h3>
+        <ul>
+            <li>Review daily tactics each morning</li>
+            <li>Time block specific periods for each tactic</li>
+            <li>Update completion immediately when finished</li>
+            <li>Track obstacles and solutions in notes</li>
+        </ul>
+        
+        <h2 style="color: #2c5aa0; border-bottom: 2px solid #e8f4fd; padding-bottom: 10px;">Navigation Guide</h2>
+        <p><strong>Access through the 12 Week Year application menu:</strong></p>
+        <ul>
+            <li><strong>12 Week Cycles:</strong> High-level cycle management</li>
+            <li><strong>Goals:</strong> Goal definition and progress tracking</li>
+            <li><strong>Weekly Actions:</strong> Weekly commitment planning</li>
+            <li><strong>Daily Tactics:</strong> Daily task execution</li>
+        </ul>
+        
+        <div style="background: #2c5aa0; color: white; text-align: center; padding: 20px; margin-top: 40px; border-radius: 8px;">
+            <p><strong>12 Week Year Application</strong> - Built on ServiceNow Platform</p>
+            <p>Version 1.0 | For support, contact your ServiceNow administrator</p>
+        </div>
+        
+        </div>
+        ]]></html>
+        <name>twelve_week_year_documentation</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-26 00:07:16</sys_created_on>
+        <sys_id>27cce7cb8274457a82eee8053bca4528</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>twelve_week_year_documentation</sys_name>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_ui_page_27cce7cb8274457a82eee8053bca4528</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-26 00:16:23</sys_updated_on>
+    </sys_ui_page>
+</record_update>

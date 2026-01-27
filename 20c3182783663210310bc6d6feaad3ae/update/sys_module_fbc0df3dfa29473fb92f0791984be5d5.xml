@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "serialNumber": "urn:uuid:eb3b4d44-c656-40ae-ba67-04a8c3481044",
+  "metadata": {
+    "timestamp": "2026-01-26T00:24:12.813Z",
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "sdk-build-plugins",
+          "group": "@servicenow",
+          "version": "4.2.0",
+          "author": "ServiceNow"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "x-942105-12-week-year",
+      "version": "1.0.0",
+      "bom-ref": "pkg:servicenow/x-942105-12-week-year@1.0.0?sys_scope_id=20c3182783663210310bc6d6feaad3ae",
+      "description": "[BUILD AGENT GENERATED]:  An application to operationalize the 12 Week Year methodology for focused goal achievement through 12-week execution cycles, weekly planning, and performance tracking",
+      "licenses": [
+        {
+          "license": {
+            "name": "UNLICENSED"
+          }
+        }
+      ],
+      "purl": "pkg:servicenow/x-942105-12-week-year@1.0.0?sys_scope_id=20c3182783663210310bc6d6feaad3ae"
+    }
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "pkg:servicenow/x-942105-12-week-year@1.0.0?sys_scope_id=20c3182783663210310bc6d6feaad3ae"
+    }
+  ]
+}]]></content>
+        <external_source>false</external_source>
+        <path>x_942105_12_week_y/x-942105-12-week-year/1.0.0/bom.json</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-25 22:12:42</sys_created_on>
+        <sys_id>fbc0df3dfa29473fb92f0791984be5d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_942105_12_week_y/x-942105-12-week-year/1.0.0/bom.json</sys_name>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_module_fbc0df3dfa29473fb92f0791984be5d5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-25 22:12:42</sys_updated_on>
+    </sys_module>
+</record_update>

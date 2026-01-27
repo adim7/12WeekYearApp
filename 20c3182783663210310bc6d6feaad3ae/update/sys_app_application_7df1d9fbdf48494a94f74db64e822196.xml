@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_application">
+    <sys_app_application action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category display_value="12 Week Year">224cb35ab6b545b0b890f30579bf0078</category>
+        <description>Operationalize the 12 Week Year methodology for focused goal achievement</description>
+        <device_type>browser</device_type>
+        <hint>Plan and execute 12-week cycles, goals, actions, and daily tactics</hint>
+        <name/>
+        <order>100</order>
+        <roles/>
+        <sys_class_name>sys_app_application</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-25 23:17:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7df1d9fbdf48494a94f74db64e822196</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>12 Week Year</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_app_application_7df1d9fbdf48494a94f74db64e822196</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-25 23:17:22</sys_updated_on>
+        <title>12 Week Year</title>
+        <view_name/>
+    </sys_app_application>
+</record_update>

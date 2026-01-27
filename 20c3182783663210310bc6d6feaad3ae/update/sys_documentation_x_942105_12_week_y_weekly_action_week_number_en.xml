@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="week_number" label="Week Number" language="en" table="x_942105_12_week_y_weekly_action">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>week_number</element>
+            <help/>
+            <hint/>
+            <label>Week Number</label>
+            <language>en</language>
+            <name>x_942105_12_week_y_weekly_action</name>
+            <plural>Week Numbers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:12:41</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Week Number</sys_name>
+            <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+            <sys_update_name>sys_documentation_x_942105_12_week_y_weekly_action_week_number_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:12:41</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

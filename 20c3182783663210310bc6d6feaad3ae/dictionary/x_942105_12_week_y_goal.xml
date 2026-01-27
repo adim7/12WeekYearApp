@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="f7e590ab83663210310bc6d6feaad3c0" label="12 Week Goal" max_length="40" name="x_942105_12_week_y_goal" type="collection">
+        <element attributes="edge_encryption_enabled=true" display="true" label="Goal Title" mandatory="true" max_length="200" name="title" type="string"/>
+        <element default="0" label="Current Execution Score (%)" max_length="40" name="current_score" read_only="true" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Goal Description" max_length="4000" name="description" type="string"/>
+        <element default="5" label="Priority" max_length="40" name="priority" type="integer"/>
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="encode_utf8=false" label="12 Week Cycle" mandatory="true" max_length="32" name="twelve_week_cycle" reference="x_942105_12_week_y_twelve_week_cycle" type="reference"/>
+        <element default="85" label="Target Execution Score (%)" max_length="40" name="target_score" type="integer"/>
+        <element attributes="encode_utf8=false" label="Owner" mandatory="true" max_length="32" name="owner" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="owner"/>
+        </index>
+        <index name="index2">
+            <element name="twelve_week_cycle"/>
+        </index>
+    </element>
+</database>

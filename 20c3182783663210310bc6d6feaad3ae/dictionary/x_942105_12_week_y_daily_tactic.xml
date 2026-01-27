@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="f170acef83a63210310bc6d6feaad352" label="Daily Tactic" max_length="40" name="x_942105_12_week_y_daily_tactic" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Order" max_length="40" name="u_order" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Planned Date" mandatory="true" max_length="40" name="planned_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="medium" label="Priority" max_length="40" name="priority" type="string">
+            <choice>
+                <element inactive_on_update="false" label="High" sequence="0" value="high"/>
+                <element inactive_on_update="false" label="Medium" sequence="1" value="medium"/>
+                <element inactive_on_update="false" label="Low" sequence="2" value="low"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Day of Week" mandatory="true" max_length="40" name="day_of_week" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Monday" sequence="0" value="monday"/>
+                <element inactive_on_update="false" label="Friday" sequence="4" value="friday"/>
+                <element inactive_on_update="false" label="Tuesday" sequence="1" value="tuesday"/>
+                <element inactive_on_update="false" label="Saturday" sequence="5" value="Saturday"/>
+                <element inactive_on_update="false" label="Wednesday" sequence="2" value="wednesday"/>
+                <element inactive_on_update="false" label="Thursday" sequence="3" value="thursday"/>
+            </choice>
+        </element>
+        <element label="Estimated Hours" max_length="40" name="time_estimate" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Daily Task" mandatory="true" max_length="500" name="task" type="string"/>
+        <element label="Completed" max_length="40" name="completed" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Notes" max_length="1000" name="notes" type="string"/>
+        <element attributes="encode_utf8=false" label="Owner" mandatory="true" max_length="32" name="owner" reference="sys_user" type="reference"/>
+        <element attributes="encode_utf8=false" label="Weekly Action" mandatory="true" max_length="32" name="weekly_action" reference="x_942105_12_week_y_weekly_action" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Actual Completion Date" max_length="40" name="actual_completion_date" type="glide_date"/>
+        <index name="index">
+            <element name="owner"/>
+        </index>
+        <index name="index2">
+            <element name="weekly_action"/>
+        </index>
+    </element>
+</database>

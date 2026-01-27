@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_942105_12_week_y.PercentCompleteCalc</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>PercentCompleteCalc</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var PercentCompleteCalc = Class.create();
+PercentCompleteCalc.prototype = {
+    initialize: function() {
+    },
+
+	recalcParent: function(parentSysId) { 
+
+		gs.info("[PercentCompleteCalc] Starting recalculation for parent: " + parentSysId);
+
+		if (!parentSysId) {
+			gs.warn("[PercentCompleteCalc] No parentSysId provided. Exiting.");
+			return; 
+		} 
+		
+		var totalHours = 0; 
+		var completedHours = 0;
+
+		var childGR = new GlideRecord('x_942105_12_week_y_daily_tactic'); 
+		childGR.addQuery('weekly_action', parentSysId); 
+		childGR.query();
+
+		while (childGR.next()) { 
+			count++;
+
+			var hours = parseFloat(childGR.time_estimate || 0); 
+			totalHours += hours; 
+
+			gs.info("[PercentCompleteCalc] Child: " + childGR.getUniqueValue() +
+                    " | Hours: " + hours +
+                    " | Complete: " + childGR.completed);
+			
+			if (childGR.completed == true || childGR.completed == 'true') { 
+				completedHours += hours; 
+			} 
+		}
+
+		gs.info("[PercentCompleteCalc] Total children found: " + count);
+        gs.info("[PercentCompleteCalc] Total Hours: " + totalHours);
+        gs.info("[PercentCompleteCalc] Completed Hours: " + completedHours);
+
+		// Calculate percent complete 
+		var percentComplete = 0; 
+		if (totalHours > 0) { 
+			percentComplete = (completedHours / totalHours) * 100; 
+		}
+
+		// Round to 2 decimal places 
+		percentComplete = parseFloat(percentComplete.toFixed(2)); 
+		
+		gs.info("[PercentCompleteCalc] Percent Complete calculated: " + percentComplete + "%");
+
+		// Update parent 
+		var parentGR = new GlideRecord('x_942105_12_week_y_weekly_action'); 
+		if (parentGR.get(parentSysId)) { 
+
+			gs.info("[PercentCompleteCalc] Updating parent record: " + parentSysId);
+
+			parentGR.time_estimate = totalHours; 
+			parentGR.u_percent_complete = percentComplete; 
+
+			var updateResult = parentGR.update(); 
+			gs.info("[PercentCompleteCalc] Parent update result: " + updateResult);
+
+        } else {
+            gs.error("[PercentCompleteCalc] Failed to retrieve parent record: " + parentSysId);
+		} 
+	},
+
+    type: 'PercentCompleteCalc'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-27 17:04:29</sys_created_on>
+        <sys_id>6422290483727610310bc6d6feaad355</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>PercentCompleteCalc</sys_name>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_script_include_6422290483727610310bc6d6feaad355</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-27 18:54:50</sys_updated_on>
+    </sys_script_include>
+</record_update>

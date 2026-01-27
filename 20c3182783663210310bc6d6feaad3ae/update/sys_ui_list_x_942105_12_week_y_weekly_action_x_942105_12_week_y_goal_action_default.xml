@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="x_942105_12_week_y_goal" relationship="" sys_domain="global" table="x_942105_12_week_y_weekly_action" version="2" view="action_default">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>action</element>
+            <list_id display_value="x_942105_12_week_y_weekly_action" element="NULL" name="x_942105_12_week_y_weekly_action" parent="x_942105_12_week_y_goal" relationship="NULL" sys_domain="global" view="278a59a0901d4a76b4e2b293e0c0c3a5">c00c1304200a433e82fc9ab713ff2e09</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:36:28</sys_created_on>
+            <sys_id>d9746511287e4dfcacc964eb69729bb0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:36:28</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>week_number</element>
+            <list_id display_value="x_942105_12_week_y_weekly_action" element="NULL" name="x_942105_12_week_y_weekly_action" parent="x_942105_12_week_y_goal" relationship="NULL" sys_domain="global" view="278a59a0901d4a76b4e2b293e0c0c3a5">c00c1304200a433e82fc9ab713ff2e09</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:36:28</sys_created_on>
+            <sys_id>d94d843576924311bcdf19d130ea9d17</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:36:28</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>priority</element>
+            <list_id display_value="x_942105_12_week_y_weekly_action" element="NULL" name="x_942105_12_week_y_weekly_action" parent="x_942105_12_week_y_goal" relationship="NULL" sys_domain="global" view="278a59a0901d4a76b4e2b293e0c0c3a5">c00c1304200a433e82fc9ab713ff2e09</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:36:28</sys_created_on>
+            <sys_id>75d573d64d3e433bbf123ce37ba23acf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:36:28</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>completed</element>
+            <list_id display_value="x_942105_12_week_y_weekly_action" element="NULL" name="x_942105_12_week_y_weekly_action" parent="x_942105_12_week_y_goal" relationship="NULL" sys_domain="global" view="278a59a0901d4a76b4e2b293e0c0c3a5">c00c1304200a433e82fc9ab713ff2e09</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:36:28</sys_created_on>
+            <sys_id>c497ddfed1bb4a7caa9f43ad5fcf7529</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:36:28</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>planned_completion_date</element>
+            <list_id display_value="x_942105_12_week_y_weekly_action" element="NULL" name="x_942105_12_week_y_weekly_action" parent="x_942105_12_week_y_goal" relationship="NULL" sys_domain="global" view="278a59a0901d4a76b4e2b293e0c0c3a5">c00c1304200a433e82fc9ab713ff2e09</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:36:28</sys_created_on>
+            <sys_id>62cf821214f54464aeebe0ee53d2d0e3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:36:28</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>actual_completion_date</element>
+            <list_id display_value="x_942105_12_week_y_weekly_action" element="NULL" name="x_942105_12_week_y_weekly_action" parent="x_942105_12_week_y_goal" relationship="NULL" sys_domain="global" view="278a59a0901d4a76b4e2b293e0c0c3a5">c00c1304200a433e82fc9ab713ff2e09</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:36:28</sys_created_on>
+            <sys_id>97673a4404364d7d80fe260a53b9fd4b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:36:28</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>owner</element>
+            <list_id display_value="x_942105_12_week_y_weekly_action" element="NULL" name="x_942105_12_week_y_weekly_action" parent="x_942105_12_week_y_goal" relationship="NULL" sys_domain="global" view="278a59a0901d4a76b4e2b293e0c0c3a5">c00c1304200a433e82fc9ab713ff2e09</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:36:28</sys_created_on>
+            <sys_id>5113db46aba04f71b02d74447e7b6fba</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:36:28</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_942105_12_week_y_weekly_action</name>
+            <parent>x_942105_12_week_y_goal</parent>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:36:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c00c1304200a433e82fc9ab713ff2e09</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_942105_12_week_y_weekly_action</sys_name>
+            <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+            <sys_update_name>sys_ui_list_x_942105_12_week_y_weekly_action_x_942105_12_week_y_goal_action_default</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:36:28</sys_updated_on>
+            <sys_user/>
+            <view display_value="Weekly Action Default View" name="action_default">278a59a0901d4a76b4e2b293e0c0c3a5</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

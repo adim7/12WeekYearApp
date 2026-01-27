@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="x_942105_12_week_y_weekly_action" relationship="" sys_domain="global" table="x_942105_12_week_y_daily_tactic" version="2" view="daily_tactic_default">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>task</element>
+            <list_id display_value="x_942105_12_week_y_daily_tactic" element="NULL" name="x_942105_12_week_y_daily_tactic" parent="x_942105_12_week_y_weekly_action" relationship="NULL" sys_domain="global" view="21c6697d9c4f4a5aa1cbace78c7d397c">cd953332cdfa4efea1e9179a406840d5</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:58:44</sys_created_on>
+            <sys_id>916396511bbb4a4883f768ccca1b0033</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:58:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>day_of_week</element>
+            <list_id display_value="x_942105_12_week_y_daily_tactic" element="NULL" name="x_942105_12_week_y_daily_tactic" parent="x_942105_12_week_y_weekly_action" relationship="NULL" sys_domain="global" view="21c6697d9c4f4a5aa1cbace78c7d397c">cd953332cdfa4efea1e9179a406840d5</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:58:44</sys_created_on>
+            <sys_id>a771f65706294553a79ddcb80e89d215</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:58:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>planned_date</element>
+            <list_id display_value="x_942105_12_week_y_daily_tactic" element="NULL" name="x_942105_12_week_y_daily_tactic" parent="x_942105_12_week_y_weekly_action" relationship="NULL" sys_domain="global" view="21c6697d9c4f4a5aa1cbace78c7d397c">cd953332cdfa4efea1e9179a406840d5</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:58:44</sys_created_on>
+            <sys_id>8baa4b4ef8d94a1da0bed4700d543314</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:58:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>priority</element>
+            <list_id display_value="x_942105_12_week_y_daily_tactic" element="NULL" name="x_942105_12_week_y_daily_tactic" parent="x_942105_12_week_y_weekly_action" relationship="NULL" sys_domain="global" view="21c6697d9c4f4a5aa1cbace78c7d397c">cd953332cdfa4efea1e9179a406840d5</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:58:44</sys_created_on>
+            <sys_id>dba9f9af02844250beb1246f1f61a04d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:58:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>completed</element>
+            <list_id display_value="x_942105_12_week_y_daily_tactic" element="NULL" name="x_942105_12_week_y_daily_tactic" parent="x_942105_12_week_y_weekly_action" relationship="NULL" sys_domain="global" view="21c6697d9c4f4a5aa1cbace78c7d397c">cd953332cdfa4efea1e9179a406840d5</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:58:44</sys_created_on>
+            <sys_id>d1f1dd5ad5984da3944dafd3660821b0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:58:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>actual_completion_date</element>
+            <list_id display_value="x_942105_12_week_y_daily_tactic" element="NULL" name="x_942105_12_week_y_daily_tactic" parent="x_942105_12_week_y_weekly_action" relationship="NULL" sys_domain="global" view="21c6697d9c4f4a5aa1cbace78c7d397c">cd953332cdfa4efea1e9179a406840d5</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:58:44</sys_created_on>
+            <sys_id>0edb848716c044c49cd432c8e564d7d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:58:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>time_estimate</element>
+            <list_id display_value="x_942105_12_week_y_daily_tactic" element="NULL" name="x_942105_12_week_y_daily_tactic" parent="x_942105_12_week_y_weekly_action" relationship="NULL" sys_domain="global" view="21c6697d9c4f4a5aa1cbace78c7d397c">cd953332cdfa4efea1e9179a406840d5</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:58:44</sys_created_on>
+            <sys_id>1e9f26fa954c4130addba349f1a48b31</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:58:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>owner</element>
+            <list_id display_value="x_942105_12_week_y_daily_tactic" element="NULL" name="x_942105_12_week_y_daily_tactic" parent="x_942105_12_week_y_weekly_action" relationship="NULL" sys_domain="global" view="21c6697d9c4f4a5aa1cbace78c7d397c">cd953332cdfa4efea1e9179a406840d5</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:58:44</sys_created_on>
+            <sys_id>0a834dfb19364d279e2188d4fe997ae0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:58:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_942105_12_week_y_daily_tactic</name>
+            <parent>x_942105_12_week_y_weekly_action</parent>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-01-25 22:58:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cd953332cdfa4efea1e9179a406840d5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_942105_12_week_y_daily_tactic</sys_name>
+            <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+            <sys_update_name>sys_ui_list_x_942105_12_week_y_daily_tactic_x_942105_12_week_y_weekly_action_daily_tactic_default</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-01-25 22:58:44</sys_updated_on>
+            <sys_user/>
+            <view display_value="Daily Tactic Default View" name="daily_tactic_default">21c6697d9c4f4a5aa1cbace78c7d397c</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>
