@@ -25,7 +25,7 @@
         <element attributes="edge_encryption_enabled=true" label="Notes" max_length="1000" name="notes" type="string"/>
         <element attributes="encode_utf8=false" label="Owner" mandatory="true" max_length="32" name="owner" reference="sys_user" type="reference"/>
         <element attributes="encode_utf8=false" label="Weekly Action" mandatory="true" max_length="32" name="weekly_action" reference="x_942105_12_week_y_weekly_action" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" label="Actual Completion Date" max_length="40" name="actual_completion_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Actual Completion Date" max_length="40" name="actual_completion_date" read_only="true" type="glide_date"/>
         <index name="index">
             <element name="owner"/>
         </index>

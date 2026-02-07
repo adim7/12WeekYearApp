@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions table="x_942105_12_week_y_daily_tactic">completed=false^planned_dateONToday@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()^actual_completion_dateISEMPTY^EQ<item endquery="false" field="completed" goto="false" newquery="false" operator="=" or="false" value="false"/>
+            <item endquery="false" field="planned_date" goto="false" newquery="false" operator="ON" or="false" value="Today@javascript:gs.beginningOfToday()@javascript:gs.endOfToday()"/>
+            <item endquery="false" field="actual_completion_date" goto="false" newquery="false" operator="ISEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+if (g_form) {
+    g_form.showFieldMsg(
+        'planned_date',
+        'This task is due in a few hours, please take immediate action to complete it.',
+        'error'
+    );
+}
+
+}]]></script_true>
+        <set_values/>
+        <short_description>Planned date is today or within 24 hours</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-29 23:15:41</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0e9989fc8332fa10310bc6d6feaad396</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Planned date is today or within 24 hours</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_ui_policy_0e9989fc8332fa10310bc6d6feaad396</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-30 01:52:33</sys_updated_on>
+        <table>x_942105_12_week_y_daily_tactic</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

@@ -12,15 +12,13 @@
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
         <collection>x_942105_12_week_y_daily_tactic</collection>
-        <condition>current.time_estimate.changes() || current.completed.changes()</condition>
+        <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="x_942105_12_week_y_daily_tactic">completed=true^EQ<item endquery="false" field="completed" goto="false" newquery="false" operator="=" or="false" value="true"/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
-        </filter_condition>
+        <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Update Weekly Action Percent Complete</name>
+        <name>Update Daily Tactic ACD if complete</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -33,14 +31,15 @@
 
 	// Add your code here
 
-    var parentSysId = current.weekly_action || previous.weekly_action;
-    if (!parentSysId) {
-        return;
-    }
+    // When completed is set to true → set actual completion date to now 
+	if (current.completed == true) { 
+		current.actual_completion_date = new GlideDateTime(); 
+	}
 
-    var calc = new ParentTaskCalculator();
-    calc.recalcParent(parentSysId);
-
+    // When completed is set to false → clear the actual completion date 
+	if (current.completed == false) { 
+		current.actual_completion_date = ''; 
+	}
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -49,17 +48,17 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2b752dc883727610310bc6d6feaad3d7</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Update Weekly Action Percent Complete</sys_name>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Update Daily Tactic ACD if complete</sys_name>
         <sys_overrides/>
         <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
         <sys_policy/>
         <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
         <sys_update_name>sys_script_2b752dc883727610310bc6d6feaad3d7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-01-27 18:55:08</sys_updated_on>
+        <sys_updated_on>2026-01-30 02:04:57</sys_updated_on>
         <template/>
-        <when>async_always</when>
+        <when>before</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=2b752dc883727610310bc6d6feaad3d7"/>
 </record_update>

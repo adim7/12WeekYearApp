@@ -5,7 +5,7 @@
         <attributes>edge_encryption_enabled=true</attributes>
         <audit>false</audit>
         <calculation/>
-        <choice>0</choice>
+        <choice/>
         <choice_field/>
         <choice_table/>
         <column_label>Actual Completion Date</column_label>
@@ -33,7 +33,7 @@
         <name>x_942105_12_week_y_weekly_action</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -53,7 +53,7 @@
         <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
         <sys_update_name>sys_dictionary_x_942105_12_week_y_weekly_action_actual_completion_date</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-01-25 22:12:41</sys_updated_on>
+        <sys_updated_on>2026-01-30 02:25:24</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

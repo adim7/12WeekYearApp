@@ -13,8 +13,8 @@
         <element label="Estimated Hours" max_length="40" name="time_estimate" read_only="true" type="integer"/>
         <element attributes="encode_utf8=false" label="Owner" mandatory="true" max_length="32" name="owner" reference="sys_user" type="reference"/>
         <element attributes="edge_encryption_enabled=true" display="true" label="Action Description" mandatory="true" max_length="500" name="action" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Actual Completion Date" max_length="40" name="actual_completion_date" type="glide_date"/>
-        <element label="Completed" max_length="40" name="completed" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Actual Completion Date" max_length="40" name="actual_completion_date" read_only="true" type="glide_date"/>
+        <element label="Completed" max_length="40" name="completed" read_only="true" type="boolean"/>
         <element attributes="encode_utf8=false" label="Goal" mandatory="true" max_length="32" name="goal" reference="x_942105_12_week_y_goal" type="reference"/>
         <index name="index">
             <element name="goal"/>

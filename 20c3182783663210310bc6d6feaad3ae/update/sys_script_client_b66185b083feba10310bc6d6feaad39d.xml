@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages>Almost due. Please take action immediatedly.</messages>
+        <name>due_date_approaching</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   
+
+	var planned = g_form.getValue('planned_date'); // adjust field name if needed 
+	var completed = g_form.getValue('completed'); // adjust field name if needed 
+	
+	if (!planned || completed == 'true') { 
+		return; 
+	} 
+	
+	var plannedDate = new GlideDateTime(planned);
+	var today = new GlideDateTime(); 
+	var tomorrow = new GlideDateTime(); 
+	tomorrow.addDaysLocalTime(1); 
+	
+	// Normalize all to midnight for clean date-only comparison 
+	plannedDate.setDisplayValue(plannedDate.getLocalDate() + " 00:00:00"); 
+	today.setDisplayValue(today.getLocalDate() + " 00:00:00"); 
+	tomorrow.setDisplayValue(tomorrow.getLocalDate() + " 00:00:00"); 
+	
+	// If planned date is today or tomorrow (but not past) 
+	if (plannedDate <= tomorrow) { alert("Warning: Planned Completion Date is today or within the next 24 hours, and this record is not completed."); 
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-29 22:40:29</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b66185b083feba10310bc6d6feaad39d</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>due_date_approaching</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_script_client_b66185b083feba10310bc6d6feaad39d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-29 23:09:12</sys_updated_on>
+        <table>x_942105_12_week_y_daily_tactic</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

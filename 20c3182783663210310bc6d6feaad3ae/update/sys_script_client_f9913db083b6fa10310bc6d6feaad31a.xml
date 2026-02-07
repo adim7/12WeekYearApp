@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Update the Actual Completion Date field when the Completed field is checked</description>
+        <field>completed</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>update_actual_completion_date</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    if (isLoading) {
+        return;
+    }
+
+    // If completed is checked → set actual completion date to today's date
+    if (newValue == 'true') {
+        var today = new Date();
+
+        function pad(n) {
+            return n < 10 ? '0' + n : n;
+        }
+
+        var year = today.getFullYear();
+        var month = pad(today.getMonth() + 1); // months are 0-based
+        var day = pad(today.getDate());
+
+        var formattedDate = year + '-' + month + '-' + day;
+
+        g_form.setValue('actual_completion_date', formattedDate);
+    }
+
+    // If completed is unchecked → clear the actual completion date
+    if (newValue == 'false') {
+        g_form.setValue('actual_completion_date', '');
+    }
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-30 02:09:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f9913db083b6fa10310bc6d6feaad31a</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>update_actual_completion_date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_script_client_f9913db083b6fa10310bc6d6feaad31a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-30 02:15:31</sys_updated_on>
+        <table>x_942105_12_week_y_daily_tactic</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
