@@ -4,13 +4,13 @@
             <element>title</element>
             <position>0</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-25 22:46:42</sys_created_on>
-            <sys_id>82bd94ab83a63210310bc6d6feaad30a</sys_id>
+            <sys_created_on>2026-02-16 04:04:45</sys_created_on>
+            <sys_id>7def6d5683837250310bc6d6feaad340</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">c6bd54ab83a63210310bc6d6feaad3ff</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-25 22:46:42</sys_updated_on>
+            <sys_updated_on>2026-02-16 04:04:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>description</element>
             <position>1</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-25 22:46:42</sys_created_on>
-            <sys_id>9ebd94ab83a63210310bc6d6feaad317</sys_id>
+            <sys_created_on>2026-02-16 04:04:45</sys_created_on>
+            <sys_id>35ef6d5683837250310bc6d6feaad342</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">c6bd54ab83a63210310bc6d6feaad3ff</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-25 22:46:42</sys_updated_on>
+            <sys_updated_on>2026-02-16 04:04:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>.begin_split</element>
             <position>2</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-25 22:46:42</sys_created_on>
-            <sys_id>5abd94ab83a63210310bc6d6feaad318</sys_id>
+            <sys_created_on>2026-02-16 04:04:45</sys_created_on>
+            <sys_id>b1ef6d5683837250310bc6d6feaad343</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">c6bd54ab83a63210310bc6d6feaad3ff</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-25 22:46:42</sys_updated_on>
+            <sys_updated_on>2026-02-16 04:04:45</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>twelve_week_cycle</element>
             <position>3</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-25 22:46:42</sys_created_on>
-            <sys_id>16bd94ab83a63210310bc6d6feaad319</sys_id>
+            <sys_created_on>2026-02-16 04:04:45</sys_created_on>
+            <sys_id>31ef6d5683837250310bc6d6feaad344</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">c6bd54ab83a63210310bc6d6feaad3ff</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-25 22:46:42</sys_updated_on>
+            <sys_updated_on>2026-02-16 04:04:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>target_score</element>
             <position>4</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-25 22:46:42</sys_created_on>
-            <sys_id>debd94ab83a63210310bc6d6feaad319</sys_id>
+            <sys_created_on>2026-02-16 04:04:45</sys_created_on>
+            <sys_id>bdef6d5683837250310bc6d6feaad344</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">c6bd54ab83a63210310bc6d6feaad3ff</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-25 22:46:42</sys_updated_on>
+            <sys_updated_on>2026-02-16 04:04:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -74,85 +74,99 @@
             <element>current_score</element>
             <position>5</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-25 22:46:42</sys_created_on>
-            <sys_id>9abd94ab83a63210310bc6d6feaad31a</sys_id>
+            <sys_created_on>2026-02-16 04:04:45</sys_created_on>
+            <sys_id>3def6d5683837250310bc6d6feaad345</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">c6bd54ab83a63210310bc6d6feaad3ff</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-25 22:46:42</sys_updated_on>
+            <sys_updated_on>2026-02-16 04:04:45</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_start_date</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-02-16 04:04:45</sys_created_on>
+            <sys_id>b9ef6d5683837250310bc6d6feaad346</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">c6bd54ab83a63210310bc6d6feaad3ff</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-02-16 04:04:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>6</position>
+            <position>7</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-25 22:46:42</sys_created_on>
-            <sys_id>56bd94ab83a63210310bc6d6feaad31b</sys_id>
+            <sys_created_on>2026-02-16 04:04:45</sys_created_on>
+            <sys_id>39ef6d5683837250310bc6d6feaad347</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">c6bd54ab83a63210310bc6d6feaad3ff</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-25 22:46:42</sys_updated_on>
+            <sys_updated_on>2026-02-16 04:04:45</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>priority</element>
-            <position>7</position>
+            <position>8</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-25 22:46:42</sys_created_on>
-            <sys_id>12bd94ab83a63210310bc6d6feaad31c</sys_id>
+            <sys_created_on>2026-02-16 04:04:45</sys_created_on>
+            <sys_id>b5ef6d5683837250310bc6d6feaad348</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">c6bd54ab83a63210310bc6d6feaad3ff</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-25 22:46:42</sys_updated_on>
+            <sys_updated_on>2026-02-16 04:04:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>active</element>
-            <position>8</position>
+            <position>9</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-25 22:46:42</sys_created_on>
-            <sys_id>dabd94ab83a63210310bc6d6feaad31c</sys_id>
+            <sys_created_on>2026-02-16 04:04:45</sys_created_on>
+            <sys_id>35ef6d5683837250310bc6d6feaad349</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">c6bd54ab83a63210310bc6d6feaad3ff</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-25 22:46:42</sys_updated_on>
+            <sys_updated_on>2026-02-16 04:04:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>owner</element>
-            <position>9</position>
+            <position>10</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-25 22:46:42</sys_created_on>
-            <sys_id>96bd94ab83a63210310bc6d6feaad31d</sys_id>
+            <sys_created_on>2026-02-16 04:04:45</sys_created_on>
+            <sys_id>b1ef6d5683837250310bc6d6feaad34a</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">c6bd54ab83a63210310bc6d6feaad3ff</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-25 22:46:42</sys_updated_on>
+            <sys_updated_on>2026-02-16 04:04:45</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>.end_split</element>
-            <position>10</position>
+            <element>u_end_date</element>
+            <position>11</position>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2026-01-25 22:46:42</sys_created_on>
-            <sys_id>52bd94ab83a63210310bc6d6feaad31e</sys_id>
+            <sys_created_on>2026-02-16 04:04:45</sys_created_on>
+            <sys_id>31ef6d5683837250310bc6d6feaad34b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">c6bd54ab83a63210310bc6d6feaad3ff</sys_ui_section>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2026-01-25 22:46:42</sys_updated_on>
+            <sys_updated_on>2026-02-16 04:04:45</sys_updated_on>
             <sys_user/>
-            <type>.end_split</type>
+            <type/>
         </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
