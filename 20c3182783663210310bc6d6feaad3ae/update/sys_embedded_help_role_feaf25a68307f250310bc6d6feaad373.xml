@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>10</order>
+        <role display_value="x_942105_12_week_y.12wy_admin" name="x_942105_12_week_y.12wy_admin">faaf25a68307f250310bc6d6feaad36e</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-16 22:42:12</sys_created_on>
+        <sys_id>feaf25a68307f250310bc6d6feaad373</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>faaf25a68307f250310bc6d6feaad36e</sys_name>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_embedded_help_role_feaf25a68307f250310bc6d6feaad373</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-16 22:42:12</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

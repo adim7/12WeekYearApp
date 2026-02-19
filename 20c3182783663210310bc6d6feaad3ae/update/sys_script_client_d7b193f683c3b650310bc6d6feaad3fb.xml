@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>start_date</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>auto_set_12_week_cycle_end_date</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    //Type appropriate comment here, and begin script below
+
+    if (!newValue) {
+        g_form.clearValue('end_date');
+        return;
+    }
+
+    // Parse yyyy-MM-dd safely
+    var parts = newValue.split("-");
+    var startDate = new Date(parts[0], parts[1] - 1, parts[2]);
+
+    // Add 83 days (12 weeks)
+    startDate.setDate(startDate.getDate() + 83);
+
+    // Format back to yyyy-MM-dd
+    var year = startDate.getFullYear();
+    var month = ('0' + (startDate.getMonth() + 1)).slice(-2);
+    var day = ('0' + startDate.getDate()).slice(-2);
+
+    var endDateString = year + "-" + month + "-" + day;
+
+    g_form.setValue('end_date', endDateString);
+
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-18 00:34:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d7b193f683c3b650310bc6d6feaad3fb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>auto_set_12_week_cycle_end_date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_script_client_d7b193f683c3b650310bc6d6feaad3fb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-19 03:01:57</sys_updated_on>
+        <table>x_942105_12_week_y_twelve_week_cycle</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

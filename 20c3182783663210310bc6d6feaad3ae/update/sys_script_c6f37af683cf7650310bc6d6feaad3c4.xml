@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_942105_12_week_y_daily_tactic</collection>
+        <condition>current.planned_date.changes() &amp;&amp; !gs.nil(current.planned_date)</condition>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Update DOW/Order based on Planned Date</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+
+    if (gs.nil(current.planned_date))
+        return;
+
+    var gd = new GlideDate();
+	gd.setValue(current.planned_date);
+
+	var util = new DateDowOrderUtils();
+	var result = util.getDayAndOrder.gd;
+
+	if(!result)
+		return;
+    
+    // Set Day of Week (choice value must match dictionary value)
+    current.day_of_week = result.value;
+
+    // Set Order (simple weekday-based order)
+    current.u_order = result.baseOrder.toString();
+
+    // --- If instead you want occurrence-based order ---
+    // current.u_order = util.getOccurrenceOrder(gd);
+
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-17 22:20:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c6f37af683cf7650310bc6d6feaad3c4</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Update DOW/Order based on Planned Date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_script_c6f37af683cf7650310bc6d6feaad3c4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-17 23:10:58</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=c6f37af683cf7650310bc6d6feaad3c4"/>
+</record_update>

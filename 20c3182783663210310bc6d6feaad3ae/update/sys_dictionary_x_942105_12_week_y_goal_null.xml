@@ -2,10 +2,10 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="" table="x_942105_12_week_y_goal">
         <active>true</active>
         <array>false</array>
-        <attributes/>
+        <attributes>email_client=true</attributes>
         <audit>true</audit>
         <calculation/>
-        <choice>0</choice>
+        <choice/>
         <choice_field/>
         <choice_table/>
         <column_label/>
@@ -53,7 +53,7 @@
         <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
         <sys_update_name>sys_dictionary_x_942105_12_week_y_goal_null</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-01-25 22:12:40</sys_updated_on>
+        <sys_updated_on>2026-02-16 22:18:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

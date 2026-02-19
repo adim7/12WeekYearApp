@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-16 22:42:13</sys_created_on>
+        <sys_id>4faf65a68307f250310bc6d6feaad32d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_942105_12_week_y_daily_tactic.x_942105_12_week_y.12wy_admin</sys_name>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_security_acl display_value="x_942105_12_week_y_daily_tactic">cbaf65a68307f250310bc6d6feaad328</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_4faf65a68307f250310bc6d6feaad32d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-16 22:42:13</sys_updated_on>
+        <sys_user_role display_value="x_942105_12_week_y.12wy_admin" name="x_942105_12_week_y.12wy_admin">faaf25a68307f250310bc6d6feaad36e</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

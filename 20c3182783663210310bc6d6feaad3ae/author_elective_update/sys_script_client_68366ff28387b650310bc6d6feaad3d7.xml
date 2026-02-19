@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_start_date</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>constrain_start_date</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+
+    var parentSysId = g_form.getValue('parent');
+    if (!parentSysId) return; // No parent selected
+
+    // GlideAjax to fetch parent start/end dates
+    var ga = new GlideAjax('ParentDateValidator');
+    ga.addParam('sysparm_name', 'getParentDates');
+    ga.addParam('sysparm_parent_id', parentSysId);
+    ga.getXMLAnswer(function(response) {
+        if (!response) return;
+
+        var parentDates = JSON.parse(response);
+        var childDateParts = newValue.split("-");
+        var childDate = new Date(childDateParts[0], childDateParts[1] - 1, childDateParts[2]);
+
+        var parentStart = new Date(parentDates.start);
+        var parentEnd = new Date(parentDates.end);
+
+        if (childDate < parentStart) {
+            alert("Start Date cannot be before the Parent's Start Date (" + parentDates.start + ").");
+            g_form.clearValue('u_start_date');
+        } else if (childDate > parentEnd) {
+            alert("Start Date cannot be after the Parent's End Date (" + parentDates.end + ").");
+            g_form.clearValue('u_start_date');
+        }
+    });
+}
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-18 02:02:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>68366ff28387b650310bc6d6feaad3d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>constrain_start_date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_script_client_68366ff28387b650310bc6d6feaad3d7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-18 02:02:32</sys_updated_on>
+        <table>x_942105_12_week_y_goal</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</application>
+        <file_path/>
+        <instance_id>6bfd3b5cfb7b86581feef633beefdcca</instance_id>
+        <instance_name>dev284426</instance_name>
+        <name>sys_script_client_68366ff28387b650310bc6d6feaad3d7</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;u_start_date&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;constrain_start_date&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+
+    var parentSysId = g_form.getValue('parent');
+    if (!parentSysId) return; // No parent selected
+
+    // GlideAjax to fetch parent start/end dates
+    var ga = new GlideAjax('ParentDateValidator');
+    ga.addParam('sysparm_name', 'getParentDates');
+    ga.addParam('sysparm_parent_id', parentSysId);
+    ga.getXMLAnswer(function(response) {
+        if (!response) return;
+
+        var parentDates = JSON.parse(response);
+        var childDateParts = newValue.split("-");
+        var childDate = new Date(childDateParts[0], childDateParts[1] - 1, childDateParts[2]);
+
+        var parentStart = new Date(parentDates.start);
+        var parentEnd = new Date(parentDates.end);
+
+        if (childDate &lt; parentStart) {
+            alert("Start Date cannot be before the Parent's Start Date (" + parentDates.start + ").");
+            g_form.clearValue('u_start_date');
+        } else if (childDate &gt; parentEnd) {
+            alert("Start Date cannot be after the Parent's End Date (" + parentDates.end + ").");
+            g_form.clearValue('u_start_date');
+        }
+    });
+}
+]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-02-18 02:02:32&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;68366ff28387b650310bc6d6feaad3d7&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;constrain_start_date&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="12 Week Year" source="x_942105_12_week_y"&gt;20c3182783663210310bc6d6feaad3ae&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="12 Week Year"&gt;20c3182783663210310bc6d6feaad3ae&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_68366ff28387b650310bc6d6feaad3d7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-02-18 02:02:32&lt;/sys_updated_on&gt;&lt;table&gt;x_942105_12_week_y_goal&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1931168030</payload_hash>
+        <record_name>constrain_start_date</record_name>
+        <reverted_from/>
+        <source>00a1a7b68307b650310bc6d6feaad31e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-18 02:02:32</sys_created_on>
+        <sys_id>d3172f768387b650310bc6d6feaad3b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19c6e7c19e00000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-18 02:02:32</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>93172f768b87b65019df1f8822ef89b8</update_guid>
+        <update_guid_history>93172f768b87b65019df1f8822ef89b8:1931168030</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-18 02:17:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>2c9aaeea468c4b40b4f0b36755939a40</sys_id>
+        <sys_metadata>68366ff28387b650310bc6d6feaad3d7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>constrain_start_date</sys_name>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_parent display_value="12 Week Goal">f7e590ab83663210310bc6d6feaad3c0</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_scope_delete display_value="">086024fc5d554d90823598e42db55064</sys_scope_delete>
+        <sys_update_name>sys_script_client_68366ff28387b650310bc6d6feaad3d7</sys_update_name>
+        <sys_update_version display_value="sys_script_client_68366ff28387b650310bc6d6feaad3d7">d3172f768387b650310bc6d6feaad3b9</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-18 02:17:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>false</active>
+        <api_name>x_942105_12_week_y.DateDowOrderUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>DateDowOrderUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var DateDowOrderUtils = Class.create();
+DateDowOrderUtils.prototype = {
+    initialize: function() {},
+
+    /**
+     * Returns weekday value and order
+     * @param {GlideDate} glideDate
+     * @returns {Object}
+     */
+    getDayAndOrder: function(glideDate) {
+
+        if (!glideDate)
+            return null;
+
+        // 1 = Monday, 6 = Saturday
+        var dayNumber = glideDate.getDayOfWeekLocalTime();
+
+        var dayMap = {
+            1: {
+                value: 'monday',
+                label: 'Monday',
+                baseOrder: 100
+            },
+            2: {
+                value: 'tuesday',
+                label: 'Tuesday',
+                baseOrder: 200
+            },
+            3: {
+                value: 'wednesday',
+                label: 'Wednesday',
+                baseOrder: 300
+            },
+            4: {
+                value: 'thursday',
+                label: 'Thursday',
+                baseOrder: 400
+            },
+            5: {
+                value: 'friday',
+                label: 'Friday',
+                baseOrder: 500
+            },
+            6: {
+                value: 'saturday',
+                label: 'Saturday',
+                baseOrder: 600
+        
+            }
+        };
+
+        return dayMap[dayNumber] || null;
+    },
+
+    type: 'DateDowOrderUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-17 22:35:12</sys_created_on>
+        <sys_id>f5467a3e83cf7650310bc6d6feaad3f4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>DateDowOrderUtils</sys_name>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_script_include_f5467a3e83cf7650310bc6d6feaad3f4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-17 23:11:08</sys_updated_on>
+    </sys_script_include>
+</record_update>

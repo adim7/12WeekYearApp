@@ -9,12 +9,12 @@
                 <element inactive_on_update="false" label="Low" sequence="2" value="low"/>
             </choice>
         </element>
-        <element attributes="edge_encryption_enabled=true" choice="1" label="Day of Week" mandatory="true" max_length="40" name="day_of_week" type="string">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Day of Week" mandatory="true" max_length="40" name="day_of_week" read_only="true" type="string">
             <choice>
                 <element inactive_on_update="false" label="Monday" sequence="0" value="monday"/>
                 <element inactive_on_update="false" label="Friday" sequence="4" value="friday"/>
                 <element inactive_on_update="false" label="Tuesday" sequence="1" value="tuesday"/>
-                <element inactive_on_update="false" label="Saturday" sequence="5" value="Saturday"/>
+                <element inactive_on_update="false" label="Saturday" sequence="5" value="saturday"/>
                 <element inactive_on_update="false" label="Wednesday" sequence="2" value="wednesday"/>
                 <element inactive_on_update="false" label="Thursday" sequence="3" value="thursday"/>
             </choice>

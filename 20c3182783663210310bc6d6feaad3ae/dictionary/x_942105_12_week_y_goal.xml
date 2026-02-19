@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" db_object_id="f7e590ab83663210310bc6d6feaad3c0" label="12 Week Goal" max_length="40" name="x_942105_12_week_y_goal" type="collection">
-        <element attributes="edge_encryption_enabled=true" label="End Date" max_length="40" name="u_end_date" type="glide_date"/>
+    <element attributes="email_client=true" audit="true" db_object_id="f7e590ab83663210310bc6d6feaad3c0" label="12 Week Goal" max_length="40" name="x_942105_12_week_y_goal" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="End Date" max_length="40" name="u_end_date" read_only="true" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" label="Start Date" max_length="40" name="u_start_date" type="glide_date"/>
         <element attributes="edge_encryption_enabled=true" display="true" label="Goal Title" mandatory="true" max_length="200" name="title" type="string"/>
         <element default="0" label="Current Execution Score (%)" max_length="40" name="current_score" read_only="true" type="integer"/>

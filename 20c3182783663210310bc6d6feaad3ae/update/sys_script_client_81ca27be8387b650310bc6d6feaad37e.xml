@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_start_date</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>validate_start_date</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+
+    // Exit early if the form is loading or if the new value is empty/null
+    if (isLoading || !newValue) return;
+
+    // Get the sys_id of the parent Twelve Week Cycle from the child record's reference field
+    var parentSysId = g_form.getValue('twelve_week_cycle');
+
+    // If no parent cycle is selected on the child record, there is nothing to validate against — exit
+    if (!parentSysId) return;
+
+    // Clear any existing validation messages on the child record's start date field before re-validating
+    g_form.hideFieldMsg('u_start_date'); // u_start_date = CHILD record field
+
+    // Split the child start date string (expected format: yyyy-MM-dd) into its components
+    var parts = newValue.split('-');
+
+    // If the split did not produce exactly 3 parts, the format is invalid — exit silently
+    if (parts.length !== 3) return;
+
+    // Construct a JavaScript Date object from the child start date parts (month is 0-indexed)
+    var childStartDate = new Date(parts[0], parts[1] - 1, parts[2]);
+
+    // Check that the constructed child start date is valid and not NaN
+    if (isNaN(childStartDate.getTime())) {
+        // Inform the user the child start date format is not recognised
+        g_form.showFieldMsg('u_start_date', 'Invalid date format.', 'error'); // u_start_date = CHILD record field
+        return;
+    }
+
+    // Instantiate a GlideAjax call targeting the server-side Script Include 'ParentDateValidator'
+    var ga = new GlideAjax('ParentDateValidator');
+
+    // Specify which method to invoke on the Script Include
+    ga.addParam('sysparm_name', 'getParentDates');
+
+    // Pass the parent Twelve Week Cycle sys_id so the server can look up the parent cycle dates
+    ga.addParam('sysparm_parent_sysid', parentSysId);
+
+    // Send the async request and handle the response via callback
+    ga.getXMLAnswer(function(response) {
+
+        // If the server returned nothing, there is nothing to process — exit
+        if (!response) return;
+
+        // Declare variable to hold the parsed server response
+        var parentDates;
+
+        // Wrap JSON.parse in try/catch to handle malformed or unexpected server responses
+        try {
+            // Attempt to parse the JSON string returned by the Script Include
+            parentDates = JSON.parse(response);
+        } catch (e) {
+            // Log the parse failure to the browser console for debugging
+            console.error('ParentDateValidator: Failed to parse response - ' + e.message);
+            return;
+        }
+
+        // Handle structured error returned from the Script Include
+        if (parentDates.error) {
+            // Log the server-side error to the browser console
+            console.error('ParentDateValidator server error: ' + parentDates.error);
+            // Display a generic error message to the user on the child start date field
+            g_form.showFieldMsg('u_start_date', 'Unable to validate date. Please contact your administrator.', 'error');
+            return;
+        }
+
+        // Alias parent cycle dates to avoid naming confusion with the child's u_start_date field
+        var cycleStartDate = parentDates.start_date; // u_start_date here = PARENT cycle field from server response
+        var cycleEndDate = parentDates.end_date; // u_end_date here   = PARENT cycle field from server response
+
+        // Split the parent cycle start date string into year, month, and day parts
+        var pStart = cycleStartDate.split('-');
+
+        // Split the parent cycle end date string into year, month, and day parts
+        var pEnd = cycleEndDate.split('-');
+
+        // Construct a JavaScript Date object for the parent cycle start date
+        var parentStartDate = new Date(pStart[0], pStart[1] - 1, pStart[2]);
+
+        // Construct a JavaScript Date object for the parent cycle end date
+        var parentEndDate = new Date(pEnd[0], pEnd[1] - 1, pEnd[2]);
+
+        // Check if the child start date falls outside the parent cycle date range
+        if (childStartDate < parentStartDate || childStartDate > parentEndDate) {
+
+            // ✅ Clear the invalid value FIRST before showing the field message
+            // This prevents setValue from triggering a UI re-render that wipes the message
+            g_form.setValue('u_start_date', ''); // u_start_date = CHILD record field being cleared
+
+            // Display an inline error message on the child start date field showing the valid parent cycle range
+            g_form.showFieldMsg(
+                'u_start_date', // CHILD record field — where the error is displayed
+                'Start Date must be within Cycle range (' // Human-readable error description
+                +
+                cycleStartDate // Parent cycle start boundary date
+                +
+                ' to ' // Separator between parent start and end dates
+                +
+                cycleEndDate + ')', // Parent cycle end boundary date
+                'error' // Message type — renders as red error styling
+            );
+
+            // // Clear the invalid date from the child start date field so the user must re-enter a valid value
+            // g_form.setValue('u_start_date', ''); // u_start_date = CHILD record field being cleared
+        }
+    });
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-18 02:20:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>81ca27be8387b650310bc6d6feaad37e</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>validate_start_date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_script_client_81ca27be8387b650310bc6d6feaad37e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-19 02:58:38</sys_updated_on>
+        <table>x_942105_12_week_y_goal</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

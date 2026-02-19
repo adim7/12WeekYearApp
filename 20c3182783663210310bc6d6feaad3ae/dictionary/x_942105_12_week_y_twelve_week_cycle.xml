@@ -6,7 +6,7 @@
         <element attributes="edge_encryption_enabled=true" label="Vision Statement" max_length="1000" name="vision" type="string"/>
         <element default="true" label="Active Cycle" max_length="40" name="active" type="boolean"/>
         <element attributes="edge_encryption_enabled=true" label="Start Date" mandatory="true" max_length="40" name="start_date" type="glide_date"/>
-        <element attributes="edge_encryption_enabled=true" label="End Date" mandatory="true" max_length="40" name="end_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="End Date" mandatory="true" max_length="40" name="end_date" read_only="true" type="glide_date"/>
         <index name="index">
             <element name="owner"/>
         </index>

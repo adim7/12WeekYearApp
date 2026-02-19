@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_942105_12_week_y.ParentDateValidator</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>ParentDateValidator</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var ParentDateValidator = Class.create();
+ParentDateValidator.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    getParentDates: function() {
+
+        // Retrieve the parent Twelve Week Cycle sys_id passed from the client script
+        var parentSysId = this.getParameter('sysparm_parent_sysid');
+
+        // If no sys_id was provided, return a structured error rather than null
+        if (!parentSysId) {
+            return JSON.stringify({
+                error: 'No parent sys_id provided'
+            });
+        }
+
+        // Instantiate a GlideRecord for the Twelve Week Cycle table
+        var gr = new GlideRecord('x_942105_12_week_y_twelve_week_cycle');
+
+        // Attempt to retrieve the parent record by sys_id — return structured error if not found
+        if (!gr.get(parentSysId)) {
+            gs.warn('ParentDateValidator: Record not found for sys_id - ' + parentSysId, 'ParentDateValidator');
+            return JSON.stringify({
+                error: 'Parent cycle record not found: ' + parentSysId
+            });
+        }
+
+        // Read the start and end date field values from the parent record as strings
+        var startDate = gr.getValue('start_date');
+        var endDate = gr.getValue('end_date');
+
+        // If either date field is unpopulated, return a structured error to prevent client-side failures
+        if (!startDate || !endDate) {
+            gs.warn('ParentDateValidator: Cycle dates missing on record - ' + parentSysId, 'ParentDateValidator');
+            return JSON.stringify({
+                error: 'Parent cycle dates are not fully configured'
+            });
+        }
+
+        // Return the parent cycle date boundaries as a JSON string to the client script
+        return JSON.stringify({
+            start_date: startDate, // Parent cycle start date (yyyy-MM-dd)
+            end_date: endDate // Parent cycle end date   (yyyy-MM-dd)
+        });
+    },
+
+    type: 'ParentDateValidator'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-18 02:47:19</sys_created_on>
+        <sys_id>6231333e83c7b650310bc6d6feaad35f</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>ParentDateValidator</sys_name>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_update_name>sys_script_include_6231333e83c7b650310bc6d6feaad35f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-19 02:43:27</sys_updated_on>
+    </sys_script_include>
+</record_update>
