@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="New Section" section_id="f172cced835ffa90310bc6d6feaad306" sys_domain="global" table="x_942105_12_week_y_goal" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>inline_checklist_macro.xml</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-02-25 22:26:52</sys_created_on>
+            <sys_id>7572cced835ffa90310bc6d6feaad38f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Checklist">cfa136c583537a90310bc6d6feaad3b4</sys_ui_formatter>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">f172cced835ffa90310bc6d6feaad306</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-02-25 22:26:52</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>New Section</caption>
+            <header>false</header>
+            <name>x_942105_12_week_y_goal</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-02-25 22:26:51</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f172cced835ffa90310bc6d6feaad306</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_942105_12_week_y_goal</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+            <sys_update_name>sys_ui_section_f172cced835ffa90310bc6d6feaad306</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-02-25 22:26:51</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</application>
+        <file_path/>
+        <instance_id>6bfd3b5cfb7b86581feef633beefdcca</instance_id>
+        <instance_name>dev284426</instance_name>
+        <name>sys_ui_section_f172cced835ffa90310bc6d6feaad306</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="New Section" section_id="f172cced835ffa90310bc6d6feaad306" sys_domain="global" table="x_942105_12_week_y_goal" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>inline_checklist_macro.xml</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2026-02-25 22:26:52</sys_created_on><sys_id>7572cced835ffa90310bc6d6feaad38f</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter display_value="Checklist">cfa136c583537a90310bc6d6feaad3b4</sys_ui_formatter><sys_ui_section caption="New Section" display_value="New Section" name="x_942105_12_week_y_goal" sys_domain="global" view="Default view">f172cced835ffa90310bc6d6feaad306</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-02-25 22:26:52</sys_updated_on><sys_user/><type>formatter</type></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>New Section</caption><header>false</header><name>x_942105_12_week_y_goal</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-02-25 22:26:51</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>f172cced835ffa90310bc6d6feaad306</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_942105_12_week_y_goal</sys_name><sys_overrides/><sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package><sys_policy/><sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope><sys_update_name>sys_ui_section_f172cced835ffa90310bc6d6feaad306</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-02-25 22:26:51</sys_updated_on><sys_user/><title>false</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-549181700</payload_hash>
+        <record_name>12 Week Goal</record_name>
+        <reverted_from/>
+        <source>17e3c2d5838f3a10310bc6d6feaad3e9</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 22:26:52</sys_created_on>
+        <sys_id>f572cced835ffa90310bc6d6feaad394</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19c96e984fa0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 22:26:52</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>b972cced7d5ffa90e96d2ba3c2793893</update_guid>
+        <update_guid_history>b972cced7d5ffa90e96d2ba3c2793893:-549181700</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 22:58:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>7a80a70d731e4f9e84af14c4f0d6fa79</sys_id>
+        <sys_metadata>f172cced835ffa90310bc6d6feaad306</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New Section</sys_name>
+        <sys_package display_value="12 Week Year" source="x_942105_12_week_y">20c3182783663210310bc6d6feaad3ae</sys_package>
+        <sys_parent display_value="12 Week Goal">f7e590ab83663210310bc6d6feaad3c0</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="12 Week Year">20c3182783663210310bc6d6feaad3ae</sys_scope>
+        <sys_scope_delete display_value="">086024fc5d554d90823598e42db55064</sys_scope_delete>
+        <sys_update_name>sys_ui_section_f172cced835ffa90310bc6d6feaad306</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_f172cced835ffa90310bc6d6feaad306">f572cced835ffa90310bc6d6feaad394</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 22:58:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
